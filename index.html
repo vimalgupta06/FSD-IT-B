@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #b0b817;  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #00e6f2;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      width: 350px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: none;
+      height: 60px;
+    }
+
+    .gender-group {
+      margin-top: 5px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button-group button {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .register-btn {
+      background-color: green;
+    }
+
+    .reset-btn {
+      background-color: red;
+    }
+
+    .register-btn:hover {
+      opacity: 0.9;
+    }
+
+    .reset-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Register Here</h2>
+    <form id="registerForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="text" id="mobile" placeholder="Enter your mobile number" required pattern="[0-9]{10}" title="Enter a 10-digit number">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required>
+
+      <label>Gender:</label>
+      <div class="gender-group">
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </div>
+
+      <label for="address">Address:</label>
+      <textarea id="address" placeholder="Enter your current address"></textarea>
+
+      <label for="branch">Branch:</label>
+      <select id="branch" required>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="ME">ME</option>
+        <option value="CE">CE</option>
+      </select>
+
+      <label for="semester">Semester:</label>
+      <select id="semester" required>
+        <option value="I">I</option>
+        <option value="II">II</option>
+        <option value="III">III</option>
+        <option value="IV">IV</option>
+        <option value="V">V</option>
+        <option value="VI">VI</option>
+        <option value="VII">VII</option>
+        <option value="VIII">VIII</option>
+      </select>
+
+      <div class="button-group">
+        <button type="submit" class="register-btn">Register</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Form Submitted Successfully!");
+    });
+  </script>
+
+</body>
+</html>
