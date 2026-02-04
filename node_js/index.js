@@ -1,13 +1,20 @@
 const http = require('http');
 const myserver = http.createServer((req,res) => {
-    if(req.url === "/" && method === "GET"){
-        res.end("Home page")
+    if(req.url === "/" && req.method === "GET"){
+        res.end("ABES Engg. College")
     }
-    else{
-        
+    else if(req.url === "/aboutus"){
+        res.end("My name is Vimal Gupta")
+    }
+
+    else if(req.url === "/class"){
+        res.end("We are student of class IT A")
+    }
+    else {
+        res.end("Error 404 not found");
     }
     console.log('server1');
-    res.end("Hello this is my first server");
+    
 });
 
 
