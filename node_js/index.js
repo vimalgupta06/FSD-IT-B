@@ -1,5 +1,5 @@
 // const http = require('http');
-const fs = require("fs");
+// const fs = require("fs");
 // const myserver = http.createServer((req,res) => {
 //     if(req.url === "/" && req.method === "GET"){
 //         res.writeHead(200, {"Content-Type":"image/jpeg"});
@@ -47,6 +47,7 @@ const fs = require("fs");
 //     }
 // });
 
-fs.appendFile("abes1.txt","appended msg" ,() => {
+// fs.appendFile("abes1.txt","appended msg" ,() => {
     
-});
+// });
+

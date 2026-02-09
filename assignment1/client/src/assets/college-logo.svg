@@ -1,0 +1,13 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="College logo">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="160" height="160" rx="28" fill="url(#g)" />
+  <circle cx="90" cy="70" r="28" fill="#ffffff" opacity="0.9" />
+  <path d="M45 120h90" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+  <path d="M55 140h70" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+  <text x="90" y="95" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#1e3a8a">FS</text>
+</svg>
