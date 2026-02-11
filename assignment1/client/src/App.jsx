@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "./assets/college-logo.svg";
+import logo from "./assets/abesimage.jpg";
 
 const API_BASE = "";
 
