@@ -1,6 +1,12 @@
-// const http = require('http');
-// const fs = require("fs");
-// const myserver = http.createServer((req,res) => {
+const http = require('http');
+const fs = require("fs");
+const home = fs.readFileSync("abes.html")
+const myserver = http.createServer((req,res) => {
+    res.statusCode=200;
+    res.setHeader('Content-type','text/html');
+    // res.end('hello world');
+    res.end(home);
+
 //     if(req.url === "/" && req.method === "GET"){
 //         res.writeHead(200, {"Content-Type":"image/jpeg"});
 //         const stream = fs.createReadStream("abesimage.jpg");
@@ -30,10 +36,10 @@
 // console.log(result);
 
 //fs.appendFileSync("./abes.txt",`and i am happy`);
-
-// myserver.listen(3000, () => {
-//    console.log('Server is running on 3000')
-// })
+});
+myserver.listen(3000, () => {
+   console.log('Server is running on 3000')
+})
 
 // ------------------------async----------------
 //fs.writeFile("./abes1.txt","code is very",() => { }); 
@@ -45,9 +51,8 @@
 //     else{
 //         console.log(result)
 //     }
-// });
+
 
 // fs.appendFile("abes1.txt","appended msg" ,() => {
     
 // });
-
